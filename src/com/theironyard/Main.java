@@ -5,8 +5,10 @@ import spark.Spark;
 public class Main {
 
     public static void main(String[] args) {
-        Spark.init();
+
         Spark.staticFileLocation("public");
+
+        Spark.init();
 
         Spark.get("/api/hello", (
                 (request, response) -> {
