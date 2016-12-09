@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
+import api from './Api';
 
 class App extends Component {
   componentDidMount() {
-    axios.get('http://localhost:3000/api/hello').then((response) => {
+    axios.get(api() + '/api/hello').then((response) => {
       console.log(response);
     })
   }
